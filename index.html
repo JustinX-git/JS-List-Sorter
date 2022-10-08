@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS List Sorter</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: hsl(268, 75%, 9%);
+            padding: .75rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .item{
+            cursor: move;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            border-radius: 5px;
+            width: 40%;
+            font-size: 1.2rem;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            transition: all 400ms ease-out;
+            color: hsl(52, 100%, 62%);
+            background:   hsl(268, 47%, 21%);
+            box-shadow: 0px 4px  0  hsl(290, 70%, 36%);
+        }
+
+
+        .item.dragging{
+            opacity: .5;
+            margin-bottom: 0;
+            height: 0;
+            visibility: hidden;
+            transition: all 100ms ease-out;
+        }
+
+        .dragging-clone{
+            width: 40%;
+            margin-left: 2rem;
+            margin-bottom: 0;
+            height: 0;
+            transform-origin: center;
+            visibility:hidden;
+            background: blue;
+            animation: cloneGrow 400ms ease-out forwards;
+        }
+    
+        @keyframes cloneGrow {
+            to{
+                height: 50px;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .dragging-clone.shrink{
+            animation: cloneShrink 400ms ease-out forwards;
+        }
+
+        @keyframes cloneShrink {
+            from{
+                height: 50px;
+                margin-bottom: 1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="item" draggable="true">Item 1</p>
+        <p class="item"  draggable="true">Item 2</p>
+        <p class="item"  draggable="true">Item 3</p>
+        <p class="item"  draggable="true">Item 4</p>
+        <p class="item"  draggable="true">Item 5</p>
+        <p class="item"  draggable="true">Item 6</p>
+        <p class="item"  draggable="true">Item 7</p>
+        <p class="item"  draggable="true">Item 8</p>
+        <p class="item"  draggable="true">Item 9</p>
+        <p class="item"  draggable="true">Item 10</p>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
+
