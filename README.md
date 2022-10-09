@@ -1,5 +1,5 @@
 # JS-List-Sorter
-A basic list sorting program with some satisfying animations for the sorting process. All made with html, css and vanilla js
+A basic list sorting program with some satisfying animations for the sorting process. All made with html, css and vanilla js.
 If you've ever used apps like YTmusic or Spotify you would notice that they have this very mesmerising and satisfying animation that is triggered when you rearrange the songs that are to play next in your playlist amd so naturally I thought...Is it possible to do something similar using just Vanilla JS? And that's precisely how this project was born. It took me about two weeks to complete, most of that time was me brainstorming the logic behind it than actually doing the coding. Anyways now I'll try to walk you through my process in achieving this final result so let's get into it.
 
 Before I start I'll like to give a big shoutout to the WebDevSimplified Youtube channel. Thier video on using draggables in Javascript was of massive help in this project. I'll have a link to that video at the end of this ReadMe.
